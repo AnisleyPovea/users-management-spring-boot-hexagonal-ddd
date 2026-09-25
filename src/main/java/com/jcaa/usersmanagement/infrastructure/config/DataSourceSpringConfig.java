@@ -19,6 +19,11 @@ public class DataSourceSpringConfig {
   private static final String PROP_DB_USERNAME = "${db.username}";
   private static final String PROP_DB_PASSWORD = "${db.password}";
 
+  private static final String PROP_DB_SSLMODE  = "${db.sslmode:require}";
+
+  private static final String HIKARI_SSLMODE_PROPERTY = "sslmode";
+  private static final String SCHEMA_SQL_PATH = "schema.sql";
+
   private static final String LOG_DATASOURCE_INIT = "[DataSourceSpringConfig] DataSource inicializado. host={} port={}";
 
   @Value(PROP_DB_HOST)
